@@ -1,6 +1,6 @@
 If your repository is in the GitHub, you can serve your documentation using
 [GitHub Pages](https://pages.github.com/) easily.
-This guide shows how to setup GitHub pages with CroJSDoc.
+This guide shows how to setup GitHub pages with CoffeeJS Doc.
 
 See also [Creating Project Pages manually - GitHub Help](https://help.github.com/articles/creating-project-pages-manually).
 
@@ -31,7 +31,7 @@ rm '.gitignore'
 ```bash
 $ cd ..
 
-$ crojsdoc
+$ coffeejsdoc
 Total x files processed
 ```
 

@@ -1,5 +1,5 @@
 output: doc
-title: CroJSDoc
+title: CoffeeJs Doc
 quiet: true
 files: true
 sources:
@@ -7,7 +7,7 @@ sources:
   - examples
   - guides
 github:
-  repository: https://github.com/croquiscom/crojsdoc
+  repository: https://github.com/igoramadas/coffeejsdoc
   ribbon: true
   sourcelink: true
 reverse_see_also: true

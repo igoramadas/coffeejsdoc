@@ -1,6 +1,6 @@
 .DS_Store
 Cakefile
-crojsdoc.yaml
+coffeejsdoc.yaml
 doc
 examples
 guides

@@ -1,7 +1,4 @@
-[![npm version](https://badge.fury.io/js/crojsdoc.svg)](http://badge.fury.io/js/crojsdoc)
-[![Build Status](https://travis-ci.org/croquiscom/crojsdoc.svg?branch=master)](https://travis-ci.org/croquiscom/crojsdoc)
-
-CroJSDoc is a documentation generator for JavaScript and CoffeeScript.
+CoffeeJS Doc is a documentation generator for JavaScript and CoffeeScript.
 This works best with CoffeeScript.
 
 This parses sources with the forked version of [dox](https://github.com/visionmedia/dox).
@@ -12,7 +9,7 @@ See live examples on http://croquiscom.github.io/crojsdoc/ and http://croquiscom
 # Command
 
 ```bash
-$ crojsdoc [-o DIRECTORY] [-t TITLE] [-q] SOURCES...
+$ coffeejsdoc [-o DIRECTORY] [-t TITLE] [-q] SOURCES...
 ```
 
 * -o DIRECTORY : set output directory, default is doc
@@ -20,7 +17,7 @@ $ crojsdoc [-o DIRECTORY] [-t TITLE] [-q] SOURCES...
 * -q : quiet output
 * SOURCES : source files or directories
 
-Or, you can specify options in crojsdoc.yaml like this:
+Or, you can specify options in coffeejsdoc.yaml like this:
 
 ```
 output: doc

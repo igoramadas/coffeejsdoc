@@ -1,7 +1,7 @@
 ##
 # Generating options
 #
-# It is built by a config file(crojsdoc.yaml) or command line arguments
+# It is built by a config file(coffeejsdoc.yaml) or command line arguments
 class Options
   ##
   # @property _project_dir

@@ -1,4 +1,4 @@
-JavaScript has the asynchronous nature, and CroJSDoc provides some tags for documentation asynchronicity.
+JavaScript has the asynchronous nature, and CoffeeJs Doc provides some tags for documentation asynchronicity.
 
 # NodeJS style's callback
 
