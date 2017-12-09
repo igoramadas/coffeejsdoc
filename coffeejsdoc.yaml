@@ -3,7 +3,7 @@ title: CoffeeJs Doc
 quiet: true
 files: true
 sources:
-  - src
+  - lib
   - examples
   - guides
 github:
