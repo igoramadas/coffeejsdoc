@@ -157,6 +157,7 @@ class Collector
         id = comment.ctx.string.replace('()', '')
       else
         id = comment.ctx.name
+
       comment.ctx.fullname = id
       comment.namespace or= ''
 
@@ -198,7 +199,7 @@ class Collector
             comment.namespace = if tag.string then tag.string else ''
           when 'property'
             comment.ctx.type = tag.type
-            comment.ctx.name = tag.name
+            comment.ctx.name = tag.name or comment.ctx.name
           when 'method'
             comment.ctx.type = tag.type
             if tag.string

@@ -28,7 +28,7 @@ block body
   section
     h1.class_title= self.name.substr(self.module_data.namespace.length)
     div
-      | (defined in 
+      | (defined in
       if self.github && self.github.sourcelink
         a(href='#{self.github.repository}/blob/#{self.github.branch}/#{self.module_data.full_path}') #{self.module_data.full_path.replace(/index.(coffee|js)$/, '')}
       else

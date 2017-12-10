@@ -151,7 +151,6 @@ _buildOptions = ->
 # @return {Array<Content>}
 # @memberOf cli
 _readSourceFiles = (options) ->
-    console.warn options
     options._exclude = [] if not options._exclude?
     if isWindows
         project_dir_re = new RegExp("^" + options._project_dir.replace(/\\/g, '\\\\'))
