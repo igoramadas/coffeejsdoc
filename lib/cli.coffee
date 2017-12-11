@@ -161,10 +161,6 @@ _readSourceFiles = (options) ->
         base_path = path = resolve options._project_dir, path
         base_path = dirname base_path while /[*?]/.test basename(base_path)
         glob.sync(path).forEach (path) =>
-            if basename(path) is "node_modules"
-                console.warn "Skipping #{path}" if not options.quiet
-                return
-
             if fs.statSync(path).isDirectory()
                 list = walkdir.sync path
             else
