@@ -124,6 +124,7 @@ _buildOptions = ->
             Function: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function'
             RegExp: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp'
             Error: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error'
+            Arguments: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments'
             undefined: 'https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/undefined'
         _sources: []
         _exclude: []

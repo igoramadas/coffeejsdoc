@@ -439,6 +439,8 @@ class Collector
         when 'restapi'
           @result.restapis[comment.ctx.name] = comment
 
+    return comments
+
   ##
   # Refines result.
   #
@@ -446,6 +448,7 @@ class Collector
   # - classes -> classes & modules
   _refineResult: ->
     result = @result
+
     result.classes = Object.keys(result.classes).sort( (a,b) ->
       a_ns = result.classes[a].namespace
       b_ns = result.classes[b].namespace
@@ -453,6 +456,7 @@ class Collector
       return 1 if a_ns > b_ns
       if a<b then -1 else 1
     ).map (name) -> result.classes[name]
+
     result.pages = Object.keys(result.pages).sort( (a,b) ->
       a_ns = result.pages[a].namespace
       b_ns = result.pages[b].namespace
@@ -460,6 +464,7 @@ class Collector
       return 1 if a_ns > b_ns
       if a<b then -1 else 1
     ).map (name) -> result.pages[name]
+
     result.restapis = Object.keys(result.restapis).sort( (a,b) ->
       a_ns = result.restapis[a].namespace
       b_ns = result.restapis[b].namespace
@@ -469,10 +474,13 @@ class Collector
       b = b.replace /([A-Z]+) \/(.*)/, '-$2 $1'
       if a<b then -1 else 1
     ).map (name) -> result.restapis[name]
+
     result.guides = result.guides.sort (a,b) ->
       if a.name < b.name then -1 else 1
+
     result.features = result.features.sort (a,b) ->
       if a.name < b.name then -1 else 1
+
     result.files = result.files.sort (a,b) ->
       a_ns = a.namespace
       b_ns = b.namespace
@@ -481,7 +489,13 @@ class Collector
       if a.name < b.name then -1 else 1
 
     result.classes.forEach (klass) ->
-      klass.properties.sort (a, b) -> if a.ctx.name < b.ctx.name then -1 else 1
+      klass.properties.sort (a, b) ->
+        ca = a.ctx.type + a.ctx.name
+        cb = b.ctx.type + b.ctx.name
+        return 1 if ca > cb
+        return -1 if cb > ca
+        return 0
+
       for property in klass.properties
         property.ctx = _.pick property.ctx, 'type', 'name', 'fullname'
 
