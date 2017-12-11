@@ -1,10 +1,8 @@
 CoffeeJS Doc is a documentation generator for JavaScript and CoffeeScript.
 This works best with CoffeeScript.
 
-This parses sources with the forked version of [dox](https://github.com/visionmedia/dox).
-And Markdown comments are processed with [marked](https://github.com/chjj/marked).
-
-See live examples on http://croquiscom.github.io/crojsdoc/ and http://croquiscom.github.io/cormo/.
+This project was forked from CroJSDoc, thank you Croquis inc. :-)
+Original here: https://github.com/croquiscom/crojsdoc
 
 # Command
 

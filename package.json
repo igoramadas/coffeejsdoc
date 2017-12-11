@@ -1,8 +1,13 @@
 {
     "name": "coffeejsdoc",
     "description": "A documentation generator for JavaScript and CoffeeScript",
-    "version": "1.0.0",
-    "keywords": ["documentation", "doc", "jsdoc", "coffeescript"],
+    "version": "0.9.0",
+    "keywords": [
+        "documentation",
+        "doc",
+        "jsdoc",
+        "coffeescript"
+    ],
     "bugs": {
         "url": "https://github.com/igoramadas/coffeejsdoc/issues"
     },
