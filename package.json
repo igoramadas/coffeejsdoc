@@ -1,13 +1,20 @@
 {
     "name": "coffeejsdoc",
-    "description": "A documentation generator for JavaScript and CoffeeScript",
     "version": "0.9.2",
+    "description": "A documentation generator for JavaScript and CoffeeScript.",
     "keywords": ["documentation", "doc", "jsdoc", "coffeescript"],
-    "bugs": {
-        "url": "https://github.com/igoramadas/coffeejsdoc/issues"
-    },
     "author": "Igor Ramadas <igor@devv.com>",
+    "homepage": "https://coffeejsdoc.devv.com",
+    "subdomain": "coffeejsdoc",
     "license": "MIT",
+    "main": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/igoramadas/coffeejsdoc.git"
+    },
+    "engines": {
+        "node": ">= 0.10"
+    },
     "bin": {
         "coffeejsdoc": "./bin/coffeejsdoc"
     },
@@ -15,13 +22,6 @@
         "build": "coffee -c -o lib src",
         "docs": "node bin/coffeejsdoc",
         "test": "NODE_ENV=test mocha --compilers coffee:coffeescript/register"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/igoramadas/coffeejsdoc.git"
-    },
-    "engines": {
-        "node": ">= 0.10"
     },
     "dependencies": {
         "coffeescript": "^2.1.0",
