@@ -26,5 +26,5 @@ task 'test:cov', 'Gets tests coverage', (options) ->
   child.on 'exit', ->
     cov_html.end()
 
-task 'doc', 'Make documents', ->
-  spawn 'npm', ['run', 'doc'], stdio: 'inherit'
+task 'docs', 'Make documents', ->
+  spawn 'npm', ['run', 'docs'], stdio: 'inherit'

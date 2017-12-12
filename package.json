@@ -13,7 +13,7 @@
     },
     "scripts": {
         "build": "coffee -c -o lib src",
-        "doc": "node bin/coffeejsdoc",
+        "docs": "node bin/coffeejsdoc",
         "test": "NODE_ENV=test mocha --compilers coffee:coffeescript/register"
     },
     "repository": {

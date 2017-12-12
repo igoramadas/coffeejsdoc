@@ -1,16 +1,19 @@
-output: doc
-title: CoffeeJs Doc
+title: CoffeeJS Doc
+output: docs
 quiet: true
 files: true
+reverse_see_also: true
+
 sources:
   - lib
   - examples
   - guides
+
+plugins:
+  - crojsdoc-plugin-underscore-private
+  - crojsdoc-plugin-auto-namespace
+
 github:
   repository: https://github.com/igoramadas/coffeejsdoc
   ribbon: true
   sourcelink: true
-reverse_see_also: true
-plugins:
-  - crojsdoc-plugin-underscore-private
-  - crojsdoc-plugin-auto-namespace

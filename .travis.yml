@@ -1,6 +1,6 @@
+sudo: false
 language: node_js
 node_js:
-  - 0.12
-  - 0.10
-
-sudo: false
+  - "9.2"
+  - "8.9"
+  - "0.12"
