@@ -1,7 +1,7 @@
 CoffeeJS Doc is a documentation generator for JavaScript and CoffeeScript.
 This works best with CoffeeScript.
 
-This project was forked from CroJSDoc, thank you Croquis inc. :-)
+This project was forked from CroJSDoc, thank you Croquis :-)
 Original here: https://github.com/croquiscom/crojsdoc
 
 # Command
