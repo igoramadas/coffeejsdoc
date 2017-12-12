@@ -21,7 +21,11 @@ _readConfig = (options) ->
             options.output = config.output
         if config.hasOwnProperty 'title'
             options.title = config.title
-        if config.hasOwnProperty 'quiet' or config.hasOwnProperty 'quite'
+        if config.hasOwnProperty 'ga-code'
+            options.gaCode = config["ga-code"]
+        else
+            options.gaCode = false
+        if config.hasOwnProperty 'quiet'
             options.quiet = config.quiet is true
         if config.hasOwnProperty 'files'
             options.files = config.files is true
@@ -43,8 +47,8 @@ _readConfig = (options) ->
             options.github = config.github
             if options.github.branch is undefined
                 options.github.branch = 'master'
-        if config.hasOwnProperty 'reverse_see_also'
-            options.reverse_see_also = config.reverse_see_also is true
+        if config.hasOwnProperty 'reverse-see-also'
+            options["reverse-see-also"] = config["reverse-see-also"] is true
         if config.hasOwnProperty 'plugins'
             plugins = config.plugins
             if not Array.isArray plugins
@@ -71,6 +75,7 @@ _parseArguments = (options) ->
         [ '-r', '--readme DIRECTORY', 'README.md directory path']
         [ '-f', '--files', 'included source files' ]
         [ '-e', '--exclude', 'excluded source files' ]
+        [ '--ga-code CODE', 'Google Analytics tracking ID' ]
         [ '--external-types JSONFILE', 'external type definitions' ]
     ]
     parser = new OptionParser switches

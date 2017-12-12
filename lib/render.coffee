@@ -102,6 +102,7 @@ class Renderer
   ##
   # Renders one template
   _renderOne: (pug_options, template, output) ->
+    pug_options.gaCode = @options.gaCode
     pug_options.result = @result
     pug_options.makeTypeLink = @_makeTypeLink.bind(@) if not pug_options.makeTypeLink
     pug_options.makeSeeLink = @_makeSeeLink.bind(@)

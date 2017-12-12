@@ -561,7 +561,7 @@ class Collector
 
     @_processComments all_comments
 
-    if @options.reverse_see_also
+    if @options["reverse-see-also"]
       @_makeReverseSeeAlso all_comments
 
     if not @options.files
