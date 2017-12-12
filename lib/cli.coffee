@@ -1,5 +1,5 @@
 ##
-# Provides CoffeeJs Doc command line interface
+# Provides CoffeeJS Doc command line interface
 # @module cli
 
 fs = require 'fs'
