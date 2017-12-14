@@ -27,6 +27,8 @@ _readConfig = (options) ->
             options.gaCode = false
         if config.hasOwnProperty 'quiet'
             options.quiet = config.quiet is true
+        if config.hasOwnProperty 'cleanup'
+            options.cleanup = config.cleanup is true
         if config.hasOwnProperty 'files'
             options.files = config.files is true
         if config.hasOwnProperty('readme') and typeof config.readme is 'string'
@@ -75,6 +77,7 @@ _parseArguments = (options) ->
         [ '-r', '--readme DIRECTORY', 'README.md directory path']
         [ '-f', '--files', 'included source files' ]
         [ '-e', '--exclude', 'excluded source files' ]
+        [ '--cleanup', 'Delete target folder before building docs' ]
         [ '--ga-code CODE', 'Google Analytics tracking ID' ]
         [ '--external-types JSONFILE', 'external type definitions' ]
     ]

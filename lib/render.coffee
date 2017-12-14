@@ -92,11 +92,18 @@ class Renderer
       files = fs.readdirSync target
     catch
       files = []
+
     for file in files
-      if file[0] isnt '.'
-        fs.rmrfSync resolve target, file
-    try fs.mkdirSync target
-    fs.copyRecursive source, target, ->
+      fullpath = resolve target, file
+      fs.rmrfSync fullpath
+
+    try
+      fs.mkdirSync target
+    catch ex
+      console.error "Could not create target resources folder.", ex
+    fs.copyRecursive source, target, (err) ->
+      if err?
+        console.error "Error copying resources", err
       callback()
 
   ##
@@ -108,7 +115,7 @@ class Renderer
     pug_options.makeSeeLink = @_makeSeeLink.bind(@)
     pug_options.convertLink = @_convertLink.bind(@)
     pug_options.github = @options.github
-    pug_options.cache = true
+    pug_options.cache = false
     pug_options.self = true
     pug.renderFile "#{@templates_dir}/#{template}.pug", pug_options, (error, result) =>
       return console.error error.stack if error
@@ -249,6 +256,9 @@ class Renderer
     @result.ns_modules = @_groupByNamespaces @result.modules
     @result.ns_features = @_groupByNamespaces @result.features
     @result.ns_files = @_groupByNamespaces @result.files
+
+    if @options.cleanup
+      fs.rmrfSync resolve(@options.output_dir)
 
     @_copyResources @resources_dir, @options.output_dir, =>
       @_renderReadme()
