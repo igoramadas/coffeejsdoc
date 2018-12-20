@@ -1,8 +1,13 @@
 {
     "name": "coffeejsdoc",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "A documentation generator for JavaScript and CoffeeScript.",
-    "keywords": ["documentation", "doc", "jsdoc", "coffeescript"],
+    "keywords": [
+        "documentation",
+        "doc",
+        "jsdoc",
+        "coffeescript"
+    ],
     "author": "Igor Ramadas <igor@devv.com>",
     "homepage": "https://coffeejsdoc.devv.com",
     "subdomain": "coffeejsdoc",
@@ -19,28 +24,28 @@
         "coffeejsdoc": "./bin/coffeejsdoc"
     },
     "scripts": {
-        "build": "coffee -c -o lib src",
+        "build": "coffee -c -b -o lib src",
         "docs": "node bin/coffeejsdoc",
         "test": "NODE_ENV=test mocha --compilers coffee:coffeescript/register"
     },
     "dependencies": {
-        "coffeescript": "^2.2.3",
+        "coffeescript": "^2.3.2",
+        "crojsdoc-plugin-auto-namespace": "^0.1.1",
+        "crojsdoc-plugin-underscore-private": "^0.1.0",
         "fs.extra": "^1.3.2",
-        "glob": "^7.1.2",
+        "glob": "^7.1.3",
         "inflect": "^0.4.0",
-        "pug": "^2.0.0-rc.4",
-        "js-yaml": "^3.10.0",
+        "pug": "^2.0.3",
+        "js-yaml": "^3.12.0",
         "jsdoctypeparser": "^2.0.0-alpha-8",
-        "lodash": "^4.17.4",
-        "marked": "^0.3.9",
+        "lodash": "^4.17.11",
+        "marked": "^0.5.2",
         "optparse": "^1.0.5",
         "walkdir": "^0.0.12"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
-        "coffee-coverage": "^3.0.0",
-        "crojsdoc-plugin-auto-namespace": "^0.1.1",
-        "crojsdoc-plugin-underscore-private": "^0.1.0",
-        "mocha": "^4.1.0"
+        "chai": "^4.2.0",
+        "coffee-coverage": "^3.0.1",
+        "mocha": "^5.2.0"
     }
 }
